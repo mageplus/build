@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ruleset name="Magento">
+ <description>Magento coding standard, based on Zend coding standard</description>
+
+ <!-- exclude anything not related to application code -->
+ <exclude-pattern>*/Test/*</exclude-pattern>
+ <exclude-pattern>*/data/*</exclude-pattern>
+
+ <!-- include the Zend coding standard -->
+ <rule ref="ZEND"/>
+
+ <!-- include additional rules here -->
+</ruleset>
