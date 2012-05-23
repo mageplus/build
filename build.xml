@@ -43,13 +43,23 @@
 
    <fileset dir="${basedir}/src">
     <include name="**/*.php" />
+    <exclude name="lib/Zend/*" />
+    <exclude name="lib/PEAR/*" />
+    <exclude name="lib/3Dsecure/*" />
+    <exclude name="lib/flex/*" />
+    <exclude name="lib/googlecheckout/*" />
+    <exclude name="lib/LinLibertineFont/*" />
+    <exclude name="lib/phpseclib/*" />
+    <exclude name="lib/Spyc/*" />
     <modified />
    </fileset>
 
+<!--
    <fileset dir="${basedir}/tests">
     <include name="**/*.php" />
     <modified />
    </fileset>
+-->
   </apply>
  </target>
 
@@ -119,7 +129,8 @@
  </target>
 
  <target name="phpunit" description="Run unit tests with PHPUnit">
-  <exec executable="phpunit" failonerror="true"/>
+  <exec executable="phpunit" failonerror="false"/>
+   <arg value="UnitTests.php" />
  </target>
 
  <target name="phpcb" description="Aggregate tool output with PHP_CodeBrowser">
