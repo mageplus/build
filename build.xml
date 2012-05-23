@@ -53,13 +53,6 @@
     <exclude name="lib/Spyc/*" />
     <modified />
    </fileset>
-
-<!--
-   <fileset dir="${basedir}/tests">
-    <include name="**/*.php" />
-    <modified />
-   </fileset>
--->
   </apply>
  </target>
 
@@ -67,6 +60,22 @@
   <exec executable="phploc">
    <arg value="--log-csv" />
    <arg value="${basedir}/build/logs/phploc.csv" />
+	 <arg value="--exclude" />
+	 <arg value="${basedir}/src/lib/Zend/" />
+	 <arg value="--exclude" />
+	 <arg value="${basedir}/src/lib/PEAR/" />
+	 <arg value="--exclude" />
+	 <arg value="${basedir}/src/lib/3Dsecure/" />
+	 <arg value="--exclude" />
+	 <arg value="${basedir}/src/lib/flex/" />
+	 <arg value="--exclude" />
+	 <arg value="${basedir}/src/lib/googlecheckout/" />
+	 <arg value="--exclude" />
+	 <arg value="${basedir}/src/lib/LinLibertineFont/" />
+	 <arg value="--exclude" />
+	 <arg value="${basedir}/src/lib/phpseclib/" />
+	 <arg value="--exclude" />
+	 <arg value="${basedir}/src/lib/Spyc/" />
    <arg path="${basedir}/src" />
   </exec>
  </target>
@@ -86,6 +95,22 @@
    <arg path="${basedir}/src" />
    <arg value="text" />
    <arg value="${basedir}/build/phpmd.xml" />
+	 <arg value="--exclude" />
+	 <arg value="${basedir}/src/lib/Zend/" />
+	 <arg value="--exclude" />
+	 <arg value="${basedir}/src/lib/PEAR/" />
+	 <arg value="--exclude" />
+	 <arg value="${basedir}/src/lib/3Dsecure/" />
+	 <arg value="--exclude" />
+	 <arg value="${basedir}/src/lib/flex/" />
+	 <arg value="--exclude" />
+	 <arg value="${basedir}/src/lib/googlecheckout/" />
+	 <arg value="--exclude" />
+	 <arg value="${basedir}/src/lib/LinLibertineFont/" />
+	 <arg value="--exclude" />
+	 <arg value="${basedir}/src/lib/phpseclib/" />
+	 <arg value="--exclude" />
+	 <arg value="${basedir}/src/lib/Spyc/" />
   </exec>
  </target>
 
@@ -96,6 +121,22 @@
    <arg value="${basedir}/build/phpmd.xml" />
    <arg value="--reportfile" />
    <arg value="${basedir}/build/logs/pmd.xml" />
+	 <arg value="--exclude" />
+	 <arg value="${basedir}/src/lib/Zend/" />
+	 <arg value="--exclude" />
+	 <arg value="${basedir}/src/lib/PEAR/" />
+	 <arg value="--exclude" />
+	 <arg value="${basedir}/src/lib/3Dsecure/" />
+	 <arg value="--exclude" />
+	 <arg value="${basedir}/src/lib/flex/" />
+	 <arg value="--exclude" />
+	 <arg value="${basedir}/src/lib/googlecheckout/" />
+	 <arg value="--exclude" />
+	 <arg value="${basedir}/src/lib/LinLibertineFont/" />
+	 <arg value="--exclude" />
+	 <arg value="${basedir}/src/lib/phpseclib/" />
+	 <arg value="--exclude" />
+	 <arg value="${basedir}/src/lib/Spyc/" />
   </exec>
  </target>
 
@@ -121,6 +162,22 @@
    <arg value="--log-pmd" />
    <arg value="${basedir}/build/logs/pmd-cpd.xml" />
    <arg path="${basedir}/src" />
+	 <arg value="--exclude" />
+	 <arg value="${basedir}/src/lib/Zend/" />
+	 <arg value="--exclude" />
+	 <arg value="${basedir}/src/lib/PEAR/" />
+	 <arg value="--exclude" />
+	 <arg value="${basedir}/src/lib/3Dsecure/" />
+	 <arg value="--exclude" />
+	 <arg value="${basedir}/src/lib/flex/" />
+	 <arg value="--exclude" />
+	 <arg value="${basedir}/src/lib/googlecheckout/" />
+	 <arg value="--exclude" />
+	 <arg value="${basedir}/src/lib/LinLibertineFont/" />
+	 <arg value="--exclude" />
+	 <arg value="${basedir}/src/lib/phpseclib/" />
+	 <arg value="--exclude" />
+	 <arg value="${basedir}/src/lib/Spyc/" />
   </exec>
  </target>
 
