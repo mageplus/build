@@ -41,7 +41,7 @@
   <apply executable="php" failonerror="true">
    <arg value="-l" />
 
-   <fileset dir="${basedir}/src">
+   <fileset dir="${basedir}">
     <include name="**/*.php" />
     <exclude name="lib/Zend/*" />
     <exclude name="lib/PEAR/*" />
@@ -61,22 +61,22 @@
    <arg value="--log-csv" />
    <arg value="${basedir}/build/logs/phploc.csv" />
 	 <arg value="--exclude" />
-	 <arg value="${basedir}/src/lib/Zend/" />
+	 <arg value="${basedir}/lib/Zend/" />
 	 <arg value="--exclude" />
-	 <arg value="${basedir}/src/lib/PEAR/" />
+	 <arg value="${basedir}/lib/PEAR/" />
 	 <arg value="--exclude" />
-	 <arg value="${basedir}/src/lib/3Dsecure/" />
+	 <arg value="${basedir}/lib/3Dsecure/" />
 	 <arg value="--exclude" />
-	 <arg value="${basedir}/src/lib/flex/" />
+	 <arg value="${basedir}/lib/flex/" />
 	 <arg value="--exclude" />
-	 <arg value="${basedir}/src/lib/googlecheckout/" />
+	 <arg value="${basedir}/lib/googlecheckout/" />
 	 <arg value="--exclude" />
-	 <arg value="${basedir}/src/lib/LinLibertineFont/" />
+	 <arg value="${basedir}/lib/LinLibertineFont/" />
 	 <arg value="--exclude" />
-	 <arg value="${basedir}/src/lib/phpseclib/" />
+	 <arg value="${basedir}/lib/phpseclib/" />
 	 <arg value="--exclude" />
-	 <arg value="${basedir}/src/lib/Spyc/" />
-   <arg path="${basedir}/src" />
+	 <arg value="${basedir}/lib/Spyc/" />
+   <arg path="${basedir}" />
   </exec>
  </target>
 
@@ -85,58 +85,58 @@
    <arg value="--jdepend-xml=${basedir}/build/logs/jdepend.xml" />
    <arg value="--jdepend-chart=${basedir}/build/pdepend/dependencies.svg" />
    <arg value="--overview-pyramid=${basedir}/build/pdepend/overview-pyramid.svg" />
-   <arg path="${basedir}/src" />
+   <arg path="${basedir}" />
   </exec>
  </target>
 
  <target name="phpmd"
          description="Perform project mess detection using PHPMD and print human readable output. Intended for usage on the command line before committing.">
   <exec executable="phpmd">
-   <arg path="${basedir}/src" />
+   <arg path="${basedir}" />
    <arg value="text" />
    <arg value="${basedir}/build/phpmd.xml" />
 	 <arg value="--exclude" />
-	 <arg value="${basedir}/src/lib/Zend/" />
+	 <arg value="${basedir}/lib/Zend/" />
 	 <arg value="--exclude" />
-	 <arg value="${basedir}/src/lib/PEAR/" />
+	 <arg value="${basedir}/lib/PEAR/" />
 	 <arg value="--exclude" />
-	 <arg value="${basedir}/src/lib/3Dsecure/" />
+	 <arg value="${basedir}/lib/3Dsecure/" />
 	 <arg value="--exclude" />
-	 <arg value="${basedir}/src/lib/flex/" />
+	 <arg value="${basedir}/lib/flex/" />
 	 <arg value="--exclude" />
-	 <arg value="${basedir}/src/lib/googlecheckout/" />
+	 <arg value="${basedir}/lib/googlecheckout/" />
 	 <arg value="--exclude" />
-	 <arg value="${basedir}/src/lib/LinLibertineFont/" />
+	 <arg value="${basedir}/lib/LinLibertineFont/" />
 	 <arg value="--exclude" />
-	 <arg value="${basedir}/src/lib/phpseclib/" />
+	 <arg value="${basedir}/lib/phpseclib/" />
 	 <arg value="--exclude" />
-	 <arg value="${basedir}/src/lib/Spyc/" />
+	 <arg value="${basedir}/lib/Spyc/" />
   </exec>
  </target>
 
  <target name="phpmd-ci" description="Perform project mess detection using PHPMD creating a log file for the continuous integration server">
   <exec executable="phpmd">
-   <arg path="${basedir}/src" />
+   <arg path="${basedir}" />
    <arg value="xml" />
    <arg value="${basedir}/build/phpmd.xml" />
    <arg value="--reportfile" />
    <arg value="${basedir}/build/logs/pmd.xml" />
 	 <arg value="--exclude" />
-	 <arg value="${basedir}/src/lib/Zend/" />
+	 <arg value="${basedir}/lib/Zend/" />
 	 <arg value="--exclude" />
-	 <arg value="${basedir}/src/lib/PEAR/" />
+	 <arg value="${basedir}/lib/PEAR/" />
 	 <arg value="--exclude" />
-	 <arg value="${basedir}/src/lib/3Dsecure/" />
+	 <arg value="${basedir}/lib/3Dsecure/" />
 	 <arg value="--exclude" />
-	 <arg value="${basedir}/src/lib/flex/" />
+	 <arg value="${basedir}/lib/flex/" />
 	 <arg value="--exclude" />
-	 <arg value="${basedir}/src/lib/googlecheckout/" />
+	 <arg value="${basedir}/lib/googlecheckout/" />
 	 <arg value="--exclude" />
-	 <arg value="${basedir}/src/lib/LinLibertineFont/" />
+	 <arg value="${basedir}/lib/LinLibertineFont/" />
 	 <arg value="--exclude" />
-	 <arg value="${basedir}/src/lib/phpseclib/" />
+	 <arg value="${basedir}/lib/phpseclib/" />
 	 <arg value="--exclude" />
-	 <arg value="${basedir}/src/lib/Spyc/" />
+	 <arg value="${basedir}/lib/Spyc/" />
   </exec>
  </target>
 
@@ -144,7 +144,7 @@
          description="Find coding standard violations using PHP_CodeSniffer and print human readable output. Intended for usage on the command line before committing.">
   <exec executable="phpcs">
    <arg value="--standard=${basedir}/build/phpcs.xml" />
-   <arg path="${basedir}/src" />
+   <arg path="${basedir}" />
   </exec>
  </target>
 
@@ -153,7 +153,7 @@
    <arg value="--report=checkstyle" />
    <arg value="--report-file=${basedir}/build/logs/checkstyle.xml" />
    <arg value="--standard=${basedir}/build/phpcs.xml" />
-   <arg path="${basedir}/src" />
+   <arg path="${basedir}" />
   </exec>
  </target>
 
@@ -161,23 +161,23 @@
   <exec executable="phpcpd">
    <arg value="--log-pmd" />
    <arg value="${basedir}/build/logs/pmd-cpd.xml" />
-   <arg path="${basedir}/src" />
+   <arg path="${basedir}" />
 	 <arg value="--exclude" />
-	 <arg value="${basedir}/src/lib/Zend/" />
+	 <arg value="${basedir}/lib/Zend/" />
 	 <arg value="--exclude" />
-	 <arg value="${basedir}/src/lib/PEAR/" />
+	 <arg value="${basedir}/lib/PEAR/" />
 	 <arg value="--exclude" />
-	 <arg value="${basedir}/src/lib/3Dsecure/" />
+	 <arg value="${basedir}/lib/3Dsecure/" />
 	 <arg value="--exclude" />
-	 <arg value="${basedir}/src/lib/flex/" />
+	 <arg value="${basedir}/lib/flex/" />
 	 <arg value="--exclude" />
-	 <arg value="${basedir}/src/lib/googlecheckout/" />
+	 <arg value="${basedir}/lib/googlecheckout/" />
 	 <arg value="--exclude" />
-	 <arg value="${basedir}/src/lib/LinLibertineFont/" />
+	 <arg value="${basedir}/lib/LinLibertineFont/" />
 	 <arg value="--exclude" />
-	 <arg value="${basedir}/src/lib/phpseclib/" />
+	 <arg value="${basedir}/lib/phpseclib/" />
 	 <arg value="--exclude" />
-	 <arg value="${basedir}/src/lib/Spyc/" />
+	 <arg value="${basedir}/lib/Spyc/" />
   </exec>
  </target>
 
