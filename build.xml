@@ -51,7 +51,6 @@
     <exclude name="lib/googlecheckout/*" />
     <exclude name="lib/LinLibertineFont/*" />
     <exclude name="lib/phpseclib/*" />
-    <!-- <exclude name="lib/Spyc/*" /> -->
     <modified />
    </fileset>
   </apply>
@@ -77,10 +76,6 @@
 	 <arg value="${basedir}/lib/LinLibertineFont/" />
 	 <arg value="--exclude" />
 	 <arg value="${basedir}/lib/phpseclib/" />
-	 <!--
-	 <arg value="--exclude" />
-	 <arg value="${basedir}/lib/Spyc/" />
-	 -->
    <arg path="${basedir}" />
   </exec>
  </target>
@@ -116,10 +111,6 @@
 	 <arg value="${basedir}/lib/LinLibertineFont/" />
 	 <arg value="--exclude" />
 	 <arg value="${basedir}/lib/phpseclib/" />
-	 <!--
-	 <arg value="--exclude" />
-	 <arg value="${basedir}/lib/Spyc/" />
-	 -->
   </exec>
  </target>
 
@@ -146,10 +137,6 @@
 	 <arg value="${basedir}/lib/LinLibertineFont/" />
 	 <arg value="--exclude" />
 	 <arg value="${basedir}/lib/phpseclib/" />
-	 <!--
-	 <arg value="--exclude" />
-	 <arg value="${basedir}/lib/Spyc/" />
-	 -->
   </exec>
  </target>
 
@@ -191,10 +178,6 @@
 	 <arg value="${basedir}/lib/LinLibertineFont/" />
 	 <arg value="--exclude" />
 	 <arg value="${basedir}/lib/phpseclib/" />
-	 <!--
-	 <arg value="--exclude" />
-	 <arg value="${basedir}/lib/Spyc/" />
-	 -->
   </exec>
  </target>
 
