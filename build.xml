@@ -162,8 +162,6 @@
    <arg value="--log-pmd" />
    <arg value="${basedir}/build/logs/pmd-cpd.xml" />
    <arg path="${basedir}" />
-         <arg value="--exclude" />
-         <arg value="${basedir}/**/Test/" />
 	 <arg value="--exclude" />
 	 <arg value="${basedir}/lib/Zend/" />
 	 <arg value="--exclude" />
