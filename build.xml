@@ -8,7 +8,7 @@
 
  <!-- for local development (ie, quick sanity check and unit tests) -->
  <target name="develop"
-   depends="prepare,lint,phpunit"/>
+   depends="prepare"/>
 
  <!-- for release candidates (the most comprehensive) -->
  <target name="release-candidate"
